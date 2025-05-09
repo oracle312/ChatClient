@@ -9,6 +9,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|c:\\users\\user\\desktop\\paralyze\\chat prog\\chatclient\\chatclient\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|c:\\users\\user\\desktop\\paralyze\\chat prog\\chatclient\\chatclient\\img\\logo.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\img\\logo.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|c:\\users\\user\\desktop\\paralyze\\chat prog\\chatclient\\chatclient\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +26,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 105,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "logo.png",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\img\\logo.png",
+              "RelativeDocumentMoniker": "ChatClient\\img\\logo.png",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\img\\logo.png",
+              "RelativeToolTip": "ChatClient\\img\\logo.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-09T05:28:08.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\AuthDto.cs",
+              "RelativeDocumentMoniker": "ChatClient\\AuthDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\AuthDto.cs",
+              "RelativeToolTip": "ChatClient\\AuthDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T04:55:30.893Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -38,16 +79,12 @@
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "ChatClient\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\MainWindow.xaml.cs",
-              "RelativeToolTip": "ChatClient\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAywBYAAAAPAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "ChatClient\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T02:01:35.777Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             }
           ]
         }
