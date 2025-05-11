@@ -17,7 +17,7 @@
 + C++
 + C#
 + Windows, Linux / Ubuntu Server
-+ VisualStudio, GitHub
++ VisualStudio, GitHub 
 <br/><br/><br/>
 
 
