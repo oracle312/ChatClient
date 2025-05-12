@@ -34,10 +34,13 @@
 ---
 + 250509 Ubuntu 에서 서버를 열어 사용자 구분없이 채팅가능
 + 250509 ASP.NET CORE 이용 로그인, 회원가입 인증기능 추가
++ 250512 프로필명 부서+이름+직급으로 나타내도록 수정, 서버수정이 필요해보임 일부메시지 누락
   <br/><br/><br/>
 
 ### 🖥️ 결과물
-250909
+
 ![Image](https://github.com/user-attachments/assets/c238ed06-aed6-4d90-9e7f-63570f1ace02)
 
 ![Image](https://github.com/user-attachments/assets/9343132c-ad67-4adb-9668-db5cc02fcc2f)
+
+![Image](https://github.com/user-attachments/assets/88b3eb6d-1aa3-4c31-a4c0-963cb3ca4c04)
