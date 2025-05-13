@@ -72,6 +72,24 @@
                             </StackPanel>
                         </ScrollViewer>
                     </Grid>
+
+                    <Grid x:Name="ChatPanel" Visibility="Collapsed" Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <!-- 채팅 메시지 출력 -->
+                        <ScrollViewer x:Name="ChatScroll" VerticalScrollBarVisibility="Auto">
+                            <StackPanel x:Name="ChatMessages" />
+                        </ScrollViewer>
+
+                        <!-- 입력창 + 전송 버튼 -->
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBox x:Name="txtMessage" Width="240" Height="30" />
+                            <Button Content="전송" Width="60" Margin="10,0,0,0" Click="BtnSend_Click" />
+                        </StackPanel>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
