@@ -15,6 +15,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Data;
 
 namespace AuthClient
 {
@@ -83,6 +84,7 @@ namespace AuthClient
                     _myDisplayName = $"{result.Department} {result.Name} {result.Position}";
 
                     MessageBox.Show($"로그인 성공!\n환영합니다, {_myDisplayName}님");
+                    
                     LoginPanel.Visibility = Visibility.Collapsed;
                     ChatPanel.Visibility = Visibility.Visible;
 
@@ -175,13 +177,30 @@ namespace AuthClient
             }
             else if (raw.StartsWith("MSG|"))
             {
-                var parts = raw.Split(new[] { '|' }, 3);
-                if (parts.Length == 3)
+                var parts = raw.Split(new[] { '|' }, 4);
+                if (parts.Length == 4)
                 {
-                    var sender = parts[1];
-                    var content = parts[2];
+                    var room = parts[1];
+                    var sender = parts[2];
+                    var content = parts[3];
+
+                    // 채팅방에 없으면 JOIN 요청 없이 그냥 추가 (중복 방지용)
+                    if (!ChatRooms.Contains(room))
+                        ChatRooms.Add(room);
+
+                    //  내가 보낸 메시지이고, 이게 실시간이면 무시 (중복 방지)
+                    //if (sender == _myDisplayName)
+                    //    return;
+
                     AppendMessage(sender, content, sender == _myDisplayName);
                 }
+            }
+
+            else if (raw.StartsWith("NEWROOM|"))
+            {
+                var roomId = raw.Substring("NEWROOM|".Length);
+                if (!ChatRooms.Contains(roomId))
+                    ChatRooms.Add(roomId);
             }
         }
 
@@ -240,9 +259,14 @@ namespace AuthClient
         {
             if (_writer != null && !string.IsNullOrWhiteSpace(txtMessage.Text))
             {
-                await _writer.WriteAsync(txtMessage.Text + "\n");
+                var roomId = txtCurrentRoom.Text.Trim();
+                var message = txtMessage.Text.Trim();
+
+                // 메시지를 MSG|roomId|message 형식으로 보냄
+                await _writer.WriteLineAsync($"MSG|{roomId}|{message}");
                 await _writer.FlushAsync();
-                AppendMessage(_myDisplayName, txtMessage.Text, true);
+
+                AppendMessage(_myDisplayName, message, true);
                 txtMessage.Clear();
             }
         }
@@ -349,12 +373,16 @@ namespace AuthClient
         {
             if (UserListBox.SelectedItem is UserItem user)
             {
-                // 서버에 JOIN 명령 보내기
-                _writer?.WriteLineAsync($"JOIN|{user.DisplayName}");
+                // 방 이름을 정렬된 쌍으로 만들기
+                var roomId = GetDirectRoomName(_myDisplayName, user.DisplayName);
+
+                if (!ChatRooms.Contains(roomId))
+                    ChatRooms.Add(roomId);
+
+                _writer?.WriteLineAsync($"JOIN|{roomId}");
                 _writer?.FlushAsync();
 
-                // 채팅 패널 열기
-                OpenChatPanel(user.DisplayName);
+                OpenChatPanel(roomId);
             }
         }
 
@@ -390,6 +418,14 @@ namespace AuthClient
         {
             if (ChatRoomsListBox.SelectedItem is string roomId)
                 OpenChatPanel(roomId);
+        }
+
+        // 항상 두 사용자 이름 알파벳 순 정렬 -> 방 이름 생성
+        private string GetDirectRoomName(string userA, string userB)
+        {
+            return string.Compare(userA, userB) < 0
+                ? $"{userA}_{userB}"
+                : $"{userB}_{userA}";
         }
     }
 }

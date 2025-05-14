@@ -11,6 +11,14 @@
       "RelativeMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|c:\\users\\user\\desktop\\paralyze\\chat prog\\chatclient\\chatclient\\roomnameconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\roomnameconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|c:\\users\\user\\desktop\\paralyze\\chat prog\\chatclient\\chatclient\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|solutionrelative:chatclient\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\AppData\\Local\\Temp\\.vsdbgsrc\\24c86bd98e5719a23f2ba55f85d6d28c98fb45abfb91e4f60c9542081fab181f\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -20,9 +28,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ChatClient\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\chat-server\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E18BE798-0E6F-43D0-B2D9-DC2E5E66089D}|ChatClient\\ChatClient.csproj|c:\\users\\user\\desktop\\paralyze\\chat prog\\chatclient\\chatclient\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,19 +45,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 105,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MainWindow.g.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\obj\\Release\\net8.0-windows\\MainWindow.g.cs",
               "RelativeDocumentMoniker": "ChatClient\\obj\\Release\\net8.0-windows\\MainWindow.g.cs",
@@ -60,12 +65,11 @@
               "RelativeToolTip": "ChatClient\\obj\\Release\\net8.0-windows\\MainWindow.g.cs",
               "ViewState": "AgIAAKwBAAAAAAAAAAAiwK0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T04:36:27.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T04:36:27.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MainWindow.g.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs",
               "RelativeDocumentMoniker": "ChatClient\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs",
@@ -77,19 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\chat-server\\src\\main.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\chat-server\\src\\main.cpp",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\chat-server\\src\\main.cpp",
-              "RelativeToolTip": "..\\..\\..\\chat-server\\src\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJEAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-13T03:20:37.429Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "logo.png",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\img\\logo.png",
               "RelativeDocumentMoniker": "ChatClient\\img\\logo.png",
@@ -100,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AuthDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\AuthDto.cs",
               "RelativeDocumentMoniker": "ChatClient\\AuthDto.cs",
@@ -130,23 +122,47 @@
               "RelativeDocumentMoniker": "ChatClient\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\MainWindow.xaml.cs",
               "RelativeToolTip": "ChatClient\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAYwDgAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAuwL4AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T02:01:35.777Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "XamlReader.cs",
               "DocumentMoniker": "C:\\Users\\USER\\AppData\\Local\\Temp\\.vsdbgsrc\\24c86bd98e5719a23f2ba55f85d6d28c98fb45abfb91e4f60c9542081fab181f\\XamlReader.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\24c86bd98e5719a23f2ba55f85d6d28c98fb45abfb91e4f60c9542081fab181f\\XamlReader.cs",
-              "ToolTip": "C:\\Users\\USER\\AppData\\Local\\Temp\\.vsdbgsrc\\24c86bd98e5719a23f2ba55f85d6d28c98fb45abfb91e4f60c9542081fab181f\\XamlReader.cs [\uC77D\uAE30 \uC804\uC6A9]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\24c86bd98e5719a23f2ba55f85d6d28c98fb45abfb91e4f60c9542081fab181f\\XamlReader.cs [\uC77D\uAE30 \uC804\uC6A9]",
-              "ViewState": "AgIAAPEBAAAAAAAAAAAawP8BAAACAAAAAQAAAA==",
+              "ToolTip": "C:\\Users\\USER\\AppData\\Local\\Temp\\.vsdbgsrc\\24c86bd98e5719a23f2ba55f85d6d28c98fb45abfb91e4f60c9542081fab181f\\XamlReader.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\24c86bd98e5719a23f2ba55f85d6d28c98fb45abfb91e4f60c9542081fab181f\\XamlReader.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAASwP4BAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T00:19:56.665Z",
-              "EditorCaption": " [\uC77D\uAE30 \uC804\uC6A9]"
+              "WhenOpened": "2025-05-14T00:19:56.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RoomNameConverter.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\RoomNameConverter.cs",
+              "RelativeDocumentMoniker": "ChatClient\\RoomNameConverter.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\RoomNameConverter.cs",
+              "RelativeToolTip": "ChatClient\\RoomNameConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T05:43:13.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\App.xaml",
+              "RelativeDocumentMoniker": "ChatClient\\App.xaml",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\App.xaml",
+              "RelativeToolTip": "ChatClient\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-14T05:43:46.205Z",
+              "EditorCaption": ""
             }
           ]
         }
