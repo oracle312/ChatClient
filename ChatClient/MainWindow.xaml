@@ -3,97 +3,143 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="사내 메신저" Height="600" Width="360"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="White">
+        WindowStyle="None" ResizeMode="NoResize" Background="White">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </Window.Resources>
+
     <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="6">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
+                <!-- Title -->
                 <RowDefinition Height="*"/>
+                <!-- Content -->
+                <RowDefinition Height="40"/>
+                <!-- TabBar -->
             </Grid.RowDefinitions>
 
-            <!-- 커스텀 타이틀 바 -->
-            <Grid Background="#ffcc00" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+            <!-- Title Bar -->
+            <Grid Grid.Row="0" Background="#ffcc00" MouseLeftButtonDown="Window_MouseLeftButtonDown">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Button Width="30" Height="30" Content="–" Click="Minimize_Click" Background="Transparent" BorderBrush="Transparent"/>
                     <Button Width="30" Height="30" Content="×" Click="Close_Click" Background="Transparent" BorderBrush="Transparent"/>
                 </StackPanel>
             </Grid>
 
-            <!-- 본문 -->
+            <!-- Content -->
             <Grid Grid.Row="1">
-                <Grid x:Name="SlidePanel">
-                    <Grid x:Name="LoginPanel" RenderTransformOrigin="0.5,0.5">
-                        <Grid.RenderTransform>
-                            <TranslateTransform x:Name="LoginTransform" X="0"/>
-                        </Grid.RenderTransform>
-                        <StackPanel VerticalAlignment="Center" Margin="40">
-                            <Image Source="/img/logo.png"
-       Width="530" Height="167"
-       Stretch="Uniform"
-       HorizontalAlignment="Center"
-       Margin="0,20,0,10"/>
-                            <TextBlock Text="아이디" FontWeight="Bold" />
-                            <TextBox x:Name="txtLoginId" Margin="0,5,0,10" Height="30"/>
-
-                            <TextBlock Text="비밀번호" FontWeight="Bold" />
-                            <PasswordBox x:Name="txtLoginPw" Margin="0,5,0,20" Height="30"/>
-
-                            <Button Content="로그인" Height="40" Click="BtnLogin_Click" Background="#ffcc00"/>
-                            <Button Content="회원가입" Height="30" Margin="0,10,0,0" Click="BtnShowRegister_Click"/>
-                        </StackPanel>
+                <Grid>
+                    <!-- User List Panel -->
+                    <Grid x:Name="UserListPanel" Visibility="Collapsed">
+                        <ListBox x:Name="UserListBox" Margin="10" ItemsSource="{Binding Users}">
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    
+                                    <!--<EventSetter Event="MouseDoubleClick" Handler="User_DoubleClick"/>-->
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding DisplayName}"/>
+                                        <TextBlock Text=" (접속중)" Foreground="Green"
+                                                   Visibility="{Binding IsOnline, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
                     </Grid>
 
-                    <Grid x:Name="RegisterPanel" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
-                        <Grid.RenderTransform>
-                            <TranslateTransform x:Name="RegisterTransform" X="360"/>
-                        </Grid.RenderTransform>
-                        <ScrollViewer>
-                            <StackPanel Margin="40">
-                                <TextBlock Text="아이디" FontWeight="Bold" />
-                                <TextBox x:Name="txtUsername" Margin="0,5,0,10" Height="30"/>
+                    <!-- Room List Panel -->
+                    <Grid x:Name="RoomListPanel" Visibility="Collapsed">
+                        <ListBox x:Name="ChatRoomsListBox" Margin="10" ItemsSource="{Binding ChatRooms}" MouseDoubleClick="ChatRoomsListBox_MouseDoubleClick"/>
+                        <Button Content="그룹채팅 참여하기" Width="120" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Click="BtnCreateGroupChat_Click"/>
+                    </Grid>
 
-                                <TextBlock Text="비밀번호" FontWeight="Bold" />
-                                <PasswordBox x:Name="txtPassword" Margin="0,5,0,10" Height="30"/>
-
-                                <TextBlock Text="이름" FontWeight="Bold" />
-                                <TextBox x:Name="txtName" Margin="0,5,0,10" Height="30"/>
-
-                                <TextBlock Text="직급" FontWeight="Bold" />
-                                <TextBox x:Name="txtPosition" Margin="0,5,0,10" Height="30"/>
-
-                                <TextBlock Text="부서" FontWeight="Bold" />
-                                <TextBox x:Name="txtDepartment" Margin="0,5,0,10" Height="30"/>
-
-                                <TextBlock Text="이메일" FontWeight="Bold" />
-                                <TextBox x:Name="txtEmail" Margin="0,5,0,20" Height="30"/>
-
-                                <Button Content="회원가입" Height="40" Click="BtnRegister_Click" Background="#ffcc00" />
-                                <Button Content="← 로그인으로" Height="30" Margin="0,10,0,0" Click="BtnShowLogin_Click"/>
+                    <!-- SlidePanel -->
+                    <Grid x:Name="SlidePanel">
+                        <!-- Login Panel -->
+                        <Grid x:Name="LoginPanel" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TranslateTransform x:Name="LoginTransform" X="0"/>
+                            </Grid.RenderTransform>
+                            <StackPanel VerticalAlignment="Center" Margin="40">
+                                <Image Source="/img/logo.png" Width="180" Height="50" Stretch="Uniform" HorizontalAlignment="Center" Margin="0,20,0,10"/>
+                                <TextBlock Text="아이디" FontWeight="Bold"/>
+                                <TextBox x:Name="txtLoginId" Margin="0,5,0,10" Height="30"/>
+                                <TextBlock Text="비밀번호" FontWeight="Bold"/>
+                                <PasswordBox x:Name="txtLoginPw" Margin="0,5,0,20" Height="30"/>
+                                <Button Content="로그인" Height="40" Click="BtnLogin_Click" Background="#ffcc00"/>
+                                <Button Content="회원가입" Height="30" Margin="0,10,0,0" Click="BtnShowRegister_Click"/>
                             </StackPanel>
-                        </ScrollViewer>
-                    </Grid>
+                        </Grid>
 
-                    <Grid x:Name="ChatPanel" Visibility="Collapsed" Margin="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
+                        <!-- Register Panel -->
+                        <Grid x:Name="RegisterPanel" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TranslateTransform x:Name="RegisterTransform" X="360"/>
+                            </Grid.RenderTransform>
+                            <ScrollViewer>
+                                <StackPanel Margin="40">
+                                    <TextBlock Text="아이디" FontWeight="Bold"/>
+                                    <TextBox x:Name="txtUsername" Margin="0,5,0,10" Height="30"/>
+                                    <TextBlock Text="비밀번호" FontWeight="Bold"/>
+                                    <PasswordBox x:Name="txtPassword" Margin="0,5,0,10" Height="30"/>
+                                    <TextBlock Text="이름" FontWeight="Bold"/>
+                                    <TextBox x:Name="txtName" Margin="0,5,0,10" Height="30"/>
+                                    <TextBlock Text="직급" FontWeight="Bold"/>
+                                    <TextBox x:Name="txtPosition" Margin="0,5,0,10" Height="30"/>
+                                    <TextBlock Text="부서" FontWeight="Bold"/>
+                                    <TextBox x:Name="txtDepartment" Margin="0,5,0,10" Height="30"/>
+                                    <TextBlock Text="이메일" FontWeight="Bold"/>
+                                    <TextBox x:Name="txtEmail" Margin="0,5,0,20" Height="30"/>
+                                    <Button Content="회원가입" Height="40" Click="BtnRegister_Click" Background="#ffcc00"/>
+                                    <Button Content="← 로그인으로" Height="30" Margin="0,10,0,0" Click="BtnShowLogin_Click"/>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
 
-                        <!-- 채팅 메시지 출력 -->
-                        <ScrollViewer x:Name="ChatScroll" VerticalScrollBarVisibility="Auto">
-                            <StackPanel x:Name="ChatMessages" />
-                        </ScrollViewer>
-
-                        <!-- 입력창 + 전송 버튼 -->
-                        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
-                            <TextBox x:Name="txtMessage" Width="240" Height="30" />
-                            <Button Content="전송" Width="60" Margin="10,0,0,0" Click="BtnSend_Click" />
-                        </StackPanel>
+                        <!-- Chat Panel -->
+                        <Grid x:Name="ChatPanel" Visibility="Collapsed" Margin="10" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TranslateTransform x:Name="ChatPanelTransform" X="360"/>
+                            </Grid.RenderTransform>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock x:Name="txtCurrentRoom" Grid.Row="0" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+                            <ScrollViewer x:Name="ChatScroll" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="ChatMessages"/>
+                            </ScrollViewer>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
+                                <TextBox x:Name="txtMessage" Width="240" Height="30"/>
+                                <Button Content="전송" Width="60" Margin="10,0,0,0" Click="BtnSend_Click"/>
+                            </StackPanel>
+                        </Grid>
                     </Grid>
                 </Grid>
+            </Grid>
+
+            <!-- Tab Bar -->
+            <Grid Grid.Row="2" Background="#f0f0f0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="사용자" Click="BtnShowUsers_Click"/>
+                <Button Grid.Column="1" Content="채팅방" Click="BtnShowChatRooms_Click"/>
             </Grid>
         </Grid>
     </Border>
 </Window>
+
+
+
+
+
+
 
 
