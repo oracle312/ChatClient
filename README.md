@@ -37,6 +37,7 @@
 + 250512 프로필명 부서+이름+직급으로 나타내도록 수정, ~~서버수정및 클라수정 필요해보임 일부메시지 누락~~
 + 250513 서버 수정, await로 비동기 연결 및 Nagle 비활성화로 일부메시지 누락 수정완료
 + 250513 회원가입한 사내 이용자 보여주기 및 실시간 접속중 확인기능 추가
++ 250514 1:1 대화보내기 및 그룹채팅 만들고 참여하기 기능추가, 현재 제대로 메시지 소통이 되지않음 + 대화보내기를 했을때 상대방 채팅방에 온 메시지가 뜨지않음
   <br/><br/><br/>
 
 ### 🖥️ 결과물
@@ -50,3 +51,5 @@
 ![Image](https://github.com/user-attachments/assets/01046b89-f71c-4401-abaa-86241cddaea4)
 
 ![Image](https://github.com/user-attachments/assets/3573147e-eb98-4a7e-8bf1-2143d71d4482)
+
+![Image](https://github.com/user-attachments/assets/aa54bf8c-b7a6-44e7-b94c-617b23a0630b)
