@@ -111,8 +111,7 @@
               "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\MainWindow.xaml",
               "RelativeToolTip": "ChatClient\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-09T02:01:38.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T02:01:38.338Z"
             },
             {
               "$type": "Document",
@@ -122,7 +121,7 @@
               "RelativeDocumentMoniker": "ChatClient\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\MainWindow.xaml.cs",
               "RelativeToolTip": "ChatClient\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAuwL4AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAALcAAAAAAAAAAAAuwMQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T02:01:35.777Z",
               "EditorCaption": ""
@@ -149,8 +148,7 @@
               "RelativeToolTip": "ChatClient\\RoomNameConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T05:43:13.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T05:43:13.806Z"
             },
             {
               "$type": "Document",
@@ -161,8 +159,7 @@
               "ToolTip": "C:\\Users\\USER\\Desktop\\Paralyze\\chat prog\\ChatClient\\ChatClient\\App.xaml",
               "RelativeToolTip": "ChatClient\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-14T05:43:46.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T05:43:46.205Z"
             }
           ]
         }

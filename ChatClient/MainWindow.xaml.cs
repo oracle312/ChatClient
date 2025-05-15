@@ -16,6 +16,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Data;
+using Microsoft.Win32;
 
 namespace AuthClient
 {
@@ -175,14 +176,17 @@ namespace AuthClient
                     if (item != null) item.IsOnline = true;
                 }
             }
-            else if (raw.StartsWith("MSG|"))
+            else if (raw.StartsWith("MSG|") || raw.StartsWith("OLD|"))
             {
-                var parts = raw.Split(new[] { '|' }, 4);
-                if (parts.Length == 4)
+                bool isOld = raw.StartsWith("OLD|");
+                var prefixLength = isOld ? 4 : 4;
+                //var parts = raw.Split(new[] { '|' }, 4);
+                var parts = raw.Substring(prefixLength).Split(new[] { '|' }, 3);
+                if (parts.Length == 3) //4
                 {
-                    var room = parts[1];
-                    var sender = parts[2];
-                    var content = parts[3];
+                    var room = parts[0];
+                    var sender = parts[1];
+                    var content = parts[2];
 
                     // 채팅방에 없으면 JOIN 요청 없이 그냥 추가 (중복 방지용)
                     if (!ChatRooms.Contains(room))
@@ -191,6 +195,10 @@ namespace AuthClient
                     //  내가 보낸 메시지이고, 이게 실시간이면 무시 (중복 방지)
                     //if (sender == _myDisplayName)
                     //    return;
+
+                    // 실시간 메시지 중 내가 보낸건 무시
+                    if (!isOld && sender == _myDisplayName)
+                        return;
 
                     AppendMessage(sender, content, sender == _myDisplayName);
                 }
